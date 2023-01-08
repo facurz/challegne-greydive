@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='submit']:hover{
+    cursor: pointer;
+    background-color: #8087924d;
+}
+
+input[type='checkbox']{
+    position: absolute;
+    left: 40px;
+    top: 2px;
+}
+
+#submit{
+    display: none;
+}
+
