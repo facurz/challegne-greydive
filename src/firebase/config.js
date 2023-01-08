@@ -1,13 +1,23 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from 'firebase/firestore/lite'
+import { getEnvironment } from "../helpers/getEnvironment";
+
+const {
+  VITE_APIKEY,
+  VITE_AUTHDOMAIN,
+  VITE_PROJECTID,
+  VITE_STORAGEBUCKET,
+  VITE_MESSAGINGSENDERID,
+  VITE_APPID,
+} = getEnvironment();
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACgVBuL764xrNcHo_R0_gLNS3a8vUXMo4",
-  authDomain: "challenge-d656d.firebaseapp.com",
-  projectId: "challenge-d656d",
-  storageBucket: "challenge-d656d.appspot.com",
-  messagingSenderId: "933982966707",
-  appId: "1:933982966707:web:f0470dcdfb1134d1d631c6"
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID,
 };
 
 export const FirebaseApp = initializeApp(firebaseConfig);
