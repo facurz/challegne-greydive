@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import db from './db/db.json';
 import { addtoFirestore } from './helpers/addToFirestore';
+import Swal from 'sweetalert2'
 
 export const App = () => {
     const { items } = db;
@@ -25,6 +26,13 @@ export const App = () => {
         event.preventDefault();
         navigate('/answers');
         addtoFirestore(formState);
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Enviado con éxito!!',
+            showConfirmButton: false,
+            timer: 1000
+          })
     };
 
     return (

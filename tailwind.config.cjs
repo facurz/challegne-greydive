@@ -10,14 +10,8 @@ module.exports = {
         sm: "576px",
         md: "960px",
         lg: "1440px",
-        "w-screen": { raw: "(min-aspect-ratio: 3/2)" },
-        "t-screen": { raw: "(min-aspect-ratio: 1/2)" },
       },
       colors: {
-        orange: "#FCDB8A",
-        red: "#E30058",
-        lightRed: "#FFE9EB",
-        blue: "#4B84F1",
         gray: "#F5F5F5",
 
         slate: "#333",
@@ -29,7 +23,7 @@ module.exports = {
         padding: "4rem",
       },
       backgroundImage: {
-        hero: "url('./src/assets/hero.jpg')",
+        hero: "url('./src/assets/hero.png')",
       },
     },
   },
